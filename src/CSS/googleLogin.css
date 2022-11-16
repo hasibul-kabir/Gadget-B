@@ -1,0 +1,30 @@
+.g-login {
+    width: 400px;
+    padding: 5px 20px;
+    background: rgba(5, 1, 255, 0);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgb(206, 206, 206);
+    cursor: pointer;
+
+}
+
+.g-login .g-icon {
+    font-size: 30px;
+}
+
+.g-login p {
+    font-weight: 600;
+}
+
+.g-login:hover {
+    background: rgb(25, 21, 255);
+}
+
+.g-login:hover p {
+    background: rgb(25, 21, 255);
+    color: aliceblue;
+}

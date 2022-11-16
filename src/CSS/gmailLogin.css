@@ -1,0 +1,29 @@
+.gmail-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gmail-login-form input {
+    width: 400px;
+    height: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.gmail-login-form button {
+    width: 450px;
+    padding: 10px 20px;
+    background: blue;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 600;
+    color: aliceblue;
+}
+
+.gmail-login-form button:hover {
+    background: rgba(0, 0, 255, 0.041);
+    color: rgb(119, 119, 119);
+    border: 1px solid blue;
+}

@@ -1,0 +1,21 @@
+.login {
+    padding: 0 100px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.login .socialLogin {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.login .devideOr {
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+.login .gmailLogin {
+    display: flex;
+    justify-content: center;
+}

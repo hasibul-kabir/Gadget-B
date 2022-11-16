@@ -1,0 +1,22 @@
+.store {
+    padding: 0 100px;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+@media screen and (max-width: 600px) {
+    .store {
+        padding: 0 20px;
+        margin: 10px 0;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width:768px) {
+    .store {
+        padding: 0 50px;
+        margin: 10px 0;
+        grid-template-columns: 2fr 2fr;
+    }
+}

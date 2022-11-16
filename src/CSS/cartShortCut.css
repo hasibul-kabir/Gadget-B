@@ -1,0 +1,24 @@
+.cart-sc {
+    cursor: pointer;
+    position: fixed;
+    right: 110px;
+    bottom: 50px;
+    height: 100px;
+    width: 100px;
+    background: rgb(29, 0, 107);
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.cart-sc .s-icon {
+    font-size: 60px;
+}
+
+.cart-sc:hover {
+    background: rgb(67, 0, 250);
+    transform: scale(1.1);
+}
