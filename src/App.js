@@ -1,6 +1,7 @@
 import './App.css';
-import './Firebase.config';
+import './FirebaseConfig';
 import { Routes, Route } from 'react-router-dom';
+import PrivateOutlet from './components/Outlets/PrivateOutlet';
 import Nav from './components/Nav';
 import Store from './components/Store';
 import OrderSummary from './components/OrderSummary/OrderSummary';
@@ -16,11 +17,12 @@ function App() {
       <Nav />
       <Routes>
         <Route path='/' element={<Store />} />
-        <Route path=':productId' element={<ProductDetails />} />
-        {/* <Route path='/product/:productId' element={<ProductDetails />} /> */}
+        <Route path='/:productId' element={<ProductDetails />} />
         <Route path='/order_summary' element={<OrderSummary />} />
-        <Route path='/checkout' element={<CheckOut />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/*' element={<PrivateOutlet />}>
+          <Route path='checkout' element={<CheckOut />} />
+        </Route>
         {/* <Route path='/*' element={<NotFound />} /> */}
       </Routes>
     </div>

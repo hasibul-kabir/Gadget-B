@@ -88,3 +88,28 @@
 .order-summary .remove-btn:hover {
     background: rgba(255, 32, 32, 0.836);
 }
+
+@media screen and (max-width: 600px) {
+    .order-summary {
+        padding: 0 20px;
+        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .order-summary h2 {
+        text-align: left;
+        letter-spacing: 1px;
+        padding: 10px;
+        top: 40px;
+    }
+
+    .ordered-product {
+        margin: 10px 0;
+        width: 300px;
+        border-radius: 5px;
+        padding: 5px;
+        gap: 10px;
+    }
+
+}

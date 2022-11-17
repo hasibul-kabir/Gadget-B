@@ -16,7 +16,6 @@ const ProductDetails = () => {
 
     return (
         product &&
-
         <div className='product-details'>
             <CartShortCut cart={cart} />
             <div className='product-img'><img src={product?.image} alt='productImage' /></div>

@@ -3,17 +3,18 @@ import '../../CSS/login.css'
 import FbLogin from './FbLogin'
 import GmailLogin from './GmailLogin'
 import GoogleLogin from './GoogleLogin'
-import auth from '../../Firebase.config'
+import auth from '../../FirebaseConfig'
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 
 const Login = () => {
+    const location = useLocation();
     const navigate = useNavigate();
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, user, error] = useSignInWithGoogle(auth);
 
     if (user) {
-        navigate('/')
+        navigate(location.state?.from ? location.state.from : '/', { replace: true })
     }
     // if (loading) {
     //     return <p>Loading...</p>

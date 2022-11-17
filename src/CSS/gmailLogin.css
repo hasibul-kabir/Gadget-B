@@ -27,3 +27,31 @@
     color: rgb(119, 119, 119);
     border: 1px solid blue;
 }
+
+@media screen and (max-width: 600px) {
+    .gmail-login-form input {
+        width: 300px;
+        height: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 0 auto;
+        border: none;
+        box-shadow: 4px 4px 16px -10px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 4px 4px 16px -10px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 4px 4px 16px -10px rgba(0, 0, 0, 0.75);
+    }
+
+    .gmail-login-form button {
+        width: 200px;
+        padding: 10px 20px;
+        font-size: 16;
+        font-weight: 400;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width:992px) {
+    .login {
+        padding: 0 50px;
+    }
+}

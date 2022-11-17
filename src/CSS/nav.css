@@ -23,6 +23,10 @@
     color: blue;
 }
 
+.nav .responsive-menu {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
     .nav {
         height: 40px;
@@ -31,5 +35,18 @@
 
     .nav .nav-item a {
         display: none;
+    }
+
+    .nav .responsive-menu {
+        display: block;
+        color: aliceblue;
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width:992px) {
+    .nav {
+        height: 40px;
+        padding: 0 50px;
     }
 }

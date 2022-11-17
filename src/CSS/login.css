@@ -19,3 +19,21 @@
     display: flex;
     justify-content: center;
 }
+
+@media screen and (max-width: 600px) {
+    .login {
+        padding: 0 20px;
+    }
+
+    .login .gmailLogin {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width:992px) {
+    .login {
+        padding: 0 50px;
+    }
+}

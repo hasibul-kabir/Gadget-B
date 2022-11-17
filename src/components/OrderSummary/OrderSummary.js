@@ -3,17 +3,13 @@ import React from 'react'
 import Cart from '../Cart'
 import OrderedProduct from './OrderedProduct'
 import useRemoveOrder from '../../Hooks/useRemoveOrder';
-import { Navigate, useLocation, useNavigate } from 'react-router-dom';
-import auth from '../../Firebase.config';
-import useAuthUser from '../../Hooks/Authentications/useAuthUser';
+import { useNavigate } from 'react-router-dom';
 
 
 const OrderSummary = () => {
-    const { user } = useAuthUser(auth);
     // const [cart] = useCart();
     const { handleRemove, cart } = useRemoveOrder();
     const navigate = useNavigate();
-    const location = useLocation();
 
     const redirectToCheckout = () => {
         // <Navigate to='checkout'  replace={true} />
