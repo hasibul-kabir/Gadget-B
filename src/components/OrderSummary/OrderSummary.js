@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 
 
 const OrderSummary = () => {
-    // const [cart] = useCart();
     const { handleRemove, cart } = useRemoveOrder();
     const navigate = useNavigate();
 

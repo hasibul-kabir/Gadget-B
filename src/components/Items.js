@@ -8,7 +8,7 @@ const Items = (props) => {
         <div className='items'>
             {
                 items.map((item) => (
-                    <Item key={item.id} data={item} handleAddToCart={handleAddToCart} />
+                    <Item key={item._id} data={item} handleAddToCart={handleAddToCart} />
                 ))
             }
         </div>

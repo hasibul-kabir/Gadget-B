@@ -17,7 +17,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path='/' element={<Store />} />
-        <Route path='/:productId' element={<ProductDetails />} />
+        <Route path='/product/:id' element={<ProductDetails />} />
         <Route path='/order_summary' element={<OrderSummary />} />
         <Route path='/login' element={<Login />} />
         <Route path='/*' element={<PrivateOutlet />}>

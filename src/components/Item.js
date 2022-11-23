@@ -6,19 +6,19 @@ import { useNavigate } from 'react-router-dom';
 const Item = (props) => {
     const navigate = useNavigate();
     const { handleAddToCart } = props;
-    const { title, description, price, image, id } = props.data;
+    const { title, description, price, image, _id } = props.data;
     const handleProductDetails = (pId) => {
-        navigate(`/${pId}`)
+        navigate(`/product/${pId}`)
     }
     return (
         <div className='item'>
             <img src={image} alt="" />
             <div className='card-content'>
-                <p className='title'>{title.length > 18 ? title.slice(0, 18) + '...' : title}</p>
-                <p className='description'>{description.length > 55 ? description.slice(0, 55) + '...' : description}</p>
+                <p className='title'>{title.length > 15 ? title.slice(0, 15) + '...' : title}</p>
+                <p className='description'>{description.length > 50 ? description.slice(0, 50) + '...' : description}</p>
                 <p className='price'>$ {price}</p>
             </div>
-            <div onClick={() => handleProductDetails(id)} className='details-btn'>Details</div>
+            <div onClick={() => handleProductDetails(_id)} className='details-btn'>Details</div>
             <div className='card-footer' onClick={() => handleAddToCart(props.data)}>
                 <p>Add to cart</p>
                 <ShoppingCartIcon style={{ color: 'white' }} />

@@ -1,5 +1,6 @@
 import '../CSS/nav.css';
 import React from 'react';
+import Brand from '../assets/Images/Brand.png';
 import { BiMenu } from 'react-icons/bi';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../FirebaseConfig';
@@ -18,7 +19,7 @@ function Nav() {
     return (
         <>
             <div className='nav'>
-                <img src='./Images/Gadgets b.png' alt='brand' />
+                <img src={Brand} alt='brand' />
                 <div className='nav-item'>
                     <Link to='/'>Home</Link>
                     <Link to='/order_summary'>Order summary</Link>

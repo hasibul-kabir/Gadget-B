@@ -12,7 +12,7 @@ const useCart = () => {
         const shoppingCart = localstorageData();
         const arr = [];
         for (const id in shoppingCart) {
-            const addedItems = items.find(item => item.id === id)
+            const addedItems = items.find(item => item._id === id)
             if (addedItems) {
                 const quantity = shoppingCart[id];
                 addedItems.quantity = quantity;

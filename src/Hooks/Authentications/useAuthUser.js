@@ -4,6 +4,7 @@ import { onAuthStateChanged } from "firebase/auth";
 const useAuthUser = (auth) => {
     const [user, setUser] = useState();
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
@@ -12,14 +13,16 @@ const useAuthUser = (auth) => {
                 setLoading(false);
                 // ...
             } else {
+                setError(true);
                 setLoading(false);
-                setUser(null)
+                setUser(null);
             }
         });
     }, [auth])
     return {
         user,
-        loading
+        loading,
+        error
     }
 }
 

@@ -3,7 +3,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 const OrderedProduct = ({ product, handleRemove }) => {
 
-    const { title, quantity, price, image, id } = product;
+    const { title, quantity, price, image, _id } = product;
     return (
         <div className='ordered-product'>
             <img src={image} alt='productImg' />
@@ -13,7 +13,7 @@ const OrderedProduct = ({ product, handleRemove }) => {
                 <p><strong>Quantity:</strong> {quantity} </p>
             </div>
             <div className='delete'>
-                <DeleteIcon className='del-icon' onClick={() => handleRemove(id)} />
+                <DeleteIcon className='del-icon' onClick={() => handleRemove(_id)} />
             </div>
         </div>
     )

@@ -8,9 +8,9 @@ const useRemoveOrder = () => {
     const handleRemove = (id) => {
         removeFromLocalStorage(id);
         let newCart = [];
-        const exists = cart.find((item) => item.id === id);
+        const exists = cart.find((item) => item._id === id);
         if (exists) {
-            const rest = cart.filter((item) => item.id !== id);
+            const rest = cart.filter((item) => item._id !== id);
             newCart = [...rest]
         }
         setCart(newCart)

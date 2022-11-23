@@ -1,9 +1,10 @@
-import '../CSS/store.css'
-import React from 'react'
-import Items from './Items'
-import useItems from '../Hooks/useItems'
-import useAddToCart from '../Hooks/useAddToCart'
-import CartShortCut from './CartShortCut'
+import '../CSS/store.css';
+import React from 'react';
+import Items from './Items';
+import useItems from '../Hooks/useItems';
+import useAddToCart from '../Hooks/useAddToCart';
+import CartShortCut from './CartShortCut';
+
 
 const Store = () => {
     const [items] = useItems();
