@@ -19,8 +19,8 @@ const Item = (props) => {
                 <p className='price'>$ {price}</p>
             </div>
             <div onClick={() => handleProductDetails(_id)} className='details-btn'>Details</div>
-            <div className='card-footer' onClick={() => handleAddToCart(props.data)}>
-                <p>Add to cart</p>
+            <div className='card-footer-btn' onClick={() => handleAddToCart(props.data)}>
+                <div className='txt'><p>Add to cart</p></div>
                 <ShoppingCartIcon style={{ color: 'white' }} />
             </div>
 

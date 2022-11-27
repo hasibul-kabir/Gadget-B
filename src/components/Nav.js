@@ -1,7 +1,7 @@
 import '../CSS/nav.css';
 import React from 'react';
+import Dropdown from 'react-bootstrap/Dropdown';
 import Brand from '../assets/Images/Brand.png';
-import { BiMenu } from 'react-icons/bi';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../FirebaseConfig';
 import { signOut } from 'firebase/auth';
@@ -18,21 +18,40 @@ function Nav() {
     }
     return (
         <>
-            <div className='nav'>
+            <div className='nav-bar'>
                 <img src={Brand} alt='brand' />
                 <div className='nav-item'>
                     <Link to='/'>Home</Link>
-                    <Link to='/order_summary'>Order summary</Link>
+                    <Link to='/order_summary'>Cart</Link>
                     {
                         user ?
-                            <button onClick={handleLogout}>Logout</button>
+                            <p onClick={handleLogout}>Logout</p>
                             :
                             <Link to='/login'>Login</Link>
                     }
                 </div>
 
                 <div className='responsive-menu'>
-                    <BiMenu />
+                    <Dropdown>
+                        <Dropdown.Toggle className='btn' />
+
+                        <Dropdown.Menu>
+                            <Dropdown.Item><Link to='/'>Home</Link></Dropdown.Item>
+                            <Dropdown.Item><Link to='/order_summary'>Order summary</Link></Dropdown.Item>
+                            {
+                                user ?
+                                    <>
+                                        <Dropdown.Item><Link>Orders</Link></Dropdown.Item>
+                                        <Dropdown.Item><p onClick={handleLogout}>Logout</p></Dropdown.Item>
+                                    </>
+                                    :
+                                    <>
+                                        <Dropdown.Item><Link to='/login'>Login</Link></Dropdown.Item>
+                                    </>
+                            }
+                        </Dropdown.Menu>
+
+                    </Dropdown>
                 </div>
             </div>
         </>

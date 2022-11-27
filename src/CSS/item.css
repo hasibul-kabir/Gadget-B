@@ -34,7 +34,7 @@
     margin-left: 10px;
     background: rgb(59, 50, 112);
     padding: 5px 20px;
-    width: 50px;
+    display: inline-block;
     border-radius: 5px;
     color: aliceblue;
     font-weight: 500;
@@ -45,21 +45,25 @@
     background: rgb(125, 112, 211);
 }
 
-.item .card-footer {
+.item .card-footer-btn {
     position: absolute;
     bottom: 0;
     border-radius: 0 0 10px 10px;
     width: 100%;
     height: 50px;
     background: rgb(1, 1, 133);
-    text-align: center;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.item .card-footer p {
+
+
+.item .card-footer-btn p {
     color: white;
     margin-right: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    display: inline;
 }

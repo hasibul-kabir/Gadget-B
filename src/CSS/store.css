@@ -5,6 +5,28 @@
     grid-template-columns: 4fr 1fr;
 }
 
+.paginations {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+
+.paginations button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 0;
+    background: rgba(0, 0, 255, 0);
+    color: blue;
+    font-weight: 600;
+    border: 1px solid blue;
+}
+
+.paginations .selected {
+    background: rgb(0, 0, 255);
+    color: aliceblue;
+}
+
 @media screen and (max-width: 600px) {
     .store {
         padding: 0 20px;

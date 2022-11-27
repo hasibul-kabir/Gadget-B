@@ -4,20 +4,21 @@ import FbLogin from './FbLogin'
 import GmailLogin from './GmailLogin'
 import GoogleLogin from './GoogleLogin'
 import auth from '../../FirebaseConfig'
+import { getAuth } from 'firebase/auth'
 import { useSignInWithGoogle, useSignInWithFacebook, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation, Link } from 'react-router-dom'
 //toast
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
+    const authentication = getAuth();
     const location = useLocation();
     const navigate = useNavigate();
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [signInWithFacebook, fUser, fLoading, fError] = useSignInWithFacebook(auth);
     const [signInWithEmailAndPassword, eUser, eLoading, eError] = useSignInWithEmailAndPassword(auth);
-
     //redirect
     if (gUser || fUser || eUser) {
         navigate(location.state?.from ? location.state.from : '/', { replace: true })
@@ -44,6 +45,13 @@ const Login = () => {
         });
     }
 
+    if (location?.state?.msg) {
+        toast.info(location.state.msg, {
+            position: toast.POSITION.TOP_CENTER,
+            toastId: customId
+        })
+    }
+
     return (
         <div className='login'>
             <h2>Login here</h2>
@@ -52,6 +60,7 @@ const Login = () => {
             <div className='socialLogin' onClick={() => signInWithFacebook()}><FbLogin /></div>
             <p className='devideOr'>- or -</p>
             <div className='gmailLogin'><GmailLogin signInWithEmailAndPassword={signInWithEmailAndPassword} /></div>
+            <p className='bottomRegister-txt'>Not registered? <Link to='/signup'>SignUp</Link> Now.</p>
         </div>
     )
 }

@@ -6,7 +6,7 @@ const GoogleLogin = () => {
     return (
         <div className='g-login'>
             <FcGoogle className='g-icon' />
-            <p>Login With Google</p>
+            <div><p>Login With Google</p></div>
         </div>
     )
 }

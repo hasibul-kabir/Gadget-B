@@ -1,17 +1,24 @@
-.gmail-login-form {
+.signup {
+    padding: 0 100px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.signup form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin: 4rem 0;
 }
 
-.gmail-login-form input {
+.signup form input {
     margin: 0 auto;
     width: 400px;
     padding: 10px 20px;
     font-size: 18px;
 }
 
-.gmail-login-form button {
+.signup form button {
     width: 450px;
     padding: 10px 20px;
     background: blue;
@@ -20,38 +27,38 @@
     font-size: large;
     font-weight: 600;
     color: aliceblue;
+    margin: 0 auto;
 }
 
-.gmail-login-form button:hover {
+.signup form button:hover {
     background: rgba(0, 0, 255, 0.041);
     color: rgb(119, 119, 119);
     border: 1px solid blue;
 }
 
+.signup p {
+    font-weight: 700;
+}
+
 @media screen and (max-width: 600px) {
-    .gmail-login-form input {
-        border: 1px solid rgb(233, 233, 233);
+    .signup {
+        padding: 0 20px;
+    }
+
+    .signup form input {
         border-radius: 5px;
         width: auto;
         padding: 10px 20px;
         font-size: 16px;
         outline: none;
+        border: none;
         box-shadow: 4px 4px 16px -10px rgba(0, 0, 0, 0.75);
         -webkit-box-shadow: 4px 4px 16px -10px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 4px 4px 16px -10px rgba(0, 0, 0, 0.75);
     }
 
-    .gmail-login-form button {
-        width: 200px;
-        padding: 10px 20px;
-        font-size: 16;
-        font-weight: 400;
-        margin: 0 auto;
-    }
-}
+    .signup form button {
+        width: auto;
 
-@media screen and (min-width: 600px) and (max-width:992px) {
-    .login {
-        padding: 0 50px;
     }
 }

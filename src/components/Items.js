@@ -1,9 +1,10 @@
 import '../CSS/items.css'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Item from './Item'
 
 const Items = (props) => {
     const { items, handleAddToCart } = props;
+
     return (
         <div className='items'>
             {

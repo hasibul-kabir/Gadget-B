@@ -56,7 +56,7 @@ const ProductDetails = () => {
                         <p><span>Price: </span>${product.price}</p>
                         <StarRating rating={product.rating} />
                         <div className='add-btn' onClick={() => handleAddtoCart(product)}>
-                            <p>Add To Cart</p>
+                            <div><p>Add To Cart</p></div>
                             <ShoppingCartIcon />
                         </div>
                     </div>

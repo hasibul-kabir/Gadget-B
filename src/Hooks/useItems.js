@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 
+
 const useItems = () => {
     const [items, setItems] = useState([]);
+    const [error, setError] = useState('');
     const [loading, setLoading] = useState(true);
     //fetch all data
     useEffect(() => {
@@ -12,13 +14,13 @@ const useItems = () => {
                 setLoading(false)
             })
             .catch((error) => {
-                console.log(error.message);
+                setError(error.message)
                 setLoading(false)
             })
 
     }, []);
 
-    return [items, loading]
+    return [items, loading, error]
 
 }
 

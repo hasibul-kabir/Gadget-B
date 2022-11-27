@@ -1,4 +1,4 @@
-.nav {
+.nav-bar {
     background: #0D1117;
     height: 50px;
     display: flex;
@@ -10,7 +10,7 @@
     z-index: 1;
 }
 
-.nav .nav-item a {
+.nav-bar .nav-item a {
     font-weight: 600;
     text-decoration: none;
     color: aliceblue;
@@ -19,33 +19,70 @@
     transition: .4s;
 }
 
-.nav .nav-item a:hover {
+.nav-bar .nav-item p {
+    font-weight: 600;
+    color: aliceblue;
+    padding-left: 20px;
+    cursor: pointer;
+    transition: .4s;
+    display: inline;
+}
+
+.nav-bar .nav-item a:hover {
     color: blue;
 }
 
-.nav .responsive-menu {
+.nav-bar .nav-item p:hover {
+    color: blue;
+}
+
+.nav-bar .responsive-menu {
     display: none;
 }
 
 @media only screen and (max-width: 600px) {
-    .nav {
+    .nav-bar {
         height: 40px;
         padding: 0 20px;
     }
 
-    .nav .nav-item a {
+    .nav-bar .nav-item {
         display: none;
     }
 
-    .nav .responsive-menu {
+    .nav-bar .responsive-menu {
         display: block;
         color: aliceblue;
         font-size: 18px;
     }
+
+    .nav-bar .responsive-menu .btn {
+        background: rgb(0, 0, 0);
+        height: 30px;
+        width: 30px;
+        padding: 5px;
+        color: rgb(255, 255, 255);
+        border-radius: 5px;
+        border: 2px solid aliceblue;
+    }
+
+    .nav-bar .responsive-menu a {
+        text-decoration: none;
+        color: #0D1117;
+        display: block;
+    }
+
+    .nav-bar .responsive-menu p {
+        text-decoration: none;
+        color: #0D1117;
+        line-height: 1rem;
+        font-weight: 700;
+    }
+
 }
 
 @media screen and (min-width: 600px) and (max-width:992px) {
-    .nav {
+    .nav-bar {
         height: 40px;
         padding: 0 50px;
     }

@@ -2,7 +2,7 @@
     margin: 0 5px;
     padding: 10px 20px;
     border-radius: 10px;
-    height: 600px;
+    height: 200px;
     position: sticky;
     top: 50px;
     background: rgb(180, 180, 180);
@@ -10,6 +10,6 @@
 
 @media screen and (max-width: 600px) {
     .cart {
-        height: 250px;
+        height: 200px;
     }
 }

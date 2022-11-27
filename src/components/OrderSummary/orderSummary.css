@@ -33,12 +33,11 @@
 
 
 .ordered-product .ordered-product-info h5 {
-    display: inline;
     font-size: 22px;
 }
 
 .ordered-product .ordered-product-info p {
-    line-height: 5px;
+    line-height: 15px;
 }
 
 .ordered-product .delete {
@@ -106,7 +105,7 @@
 
     .ordered-product {
         margin: 10px 0;
-        width: 300px;
+        width: auto;
         border-radius: 5px;
         padding: 5px;
         gap: 10px;

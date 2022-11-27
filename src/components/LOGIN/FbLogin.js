@@ -6,7 +6,7 @@ const FbLogin = () => {
     return (
         <div className='fb-login'>
             <FaFacebook className='fb-icon' />
-            <p>Login With Facebook</p>
+            <div><p>Login With Facebook</p></div>
         </div>
     )
 }

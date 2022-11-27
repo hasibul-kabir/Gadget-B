@@ -1,0 +1,89 @@
+.checkout {
+    padding: 0 100px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.checkout .envoice {
+    margin: 20px 15rem;
+    padding: 20px 50px;
+    border-radius: 5px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 4px 4px 16px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 4px 16px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 16px -10px rgba(0, 0, 0, 0.75);
+}
+
+.checkout .envoice p {
+    font-weight: 600;
+}
+
+.checkout .envoice p span {
+    color: rgb(100, 100, 100);
+}
+
+.checkout form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 15rem;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 16px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 4px 16px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 16px -10px rgba(0, 0, 0, 0.75);
+}
+
+.checkout form input {
+    padding: 5px;
+    outline: none;
+}
+
+.checkout form textarea {
+    padding: 5px;
+    outline: none;
+}
+
+.checkout form textarea {
+    padding: 5px;
+    outline: none;
+}
+
+.checkout form button {
+    padding: 5px;
+    width: auto;
+    background: blue;
+    font-weight: 600;
+    color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid blue;
+    outline: none;
+}
+
+.checkout form button:hover {
+    background: rgba(0, 0, 255, 0);
+    color: rgb(114, 114, 114);
+}
+
+@media screen and (max-width: 600px) {
+    .checkout {
+        padding: 0 20px;
+    }
+
+    .checkout .envoice {
+        margin: 20px;
+    }
+
+    .checkout form {
+        margin: 20px;
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width:992px) {
+    .checkout {
+        padding: 0 50px;
+    }
+}

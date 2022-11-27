@@ -1,6 +1,6 @@
 .g-login {
     width: 400px;
-    padding: 5px 20px;
+    padding: 10px 20px;
     background: rgba(5, 1, 255, 0);
     border-radius: 5px;
     display: flex;
@@ -9,7 +9,6 @@
     gap: 10px;
     border: 1px solid rgb(206, 206, 206);
     cursor: pointer;
-
 }
 
 .g-login .g-icon {
@@ -18,6 +17,7 @@
 
 .g-login p {
     font-weight: 600;
+    display: inline;
 }
 
 .g-login:hover {
