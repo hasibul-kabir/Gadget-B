@@ -17,7 +17,7 @@ const Store = () => {
     const [selectedPage, setSelectedPage] = useState(0);
     //fetch all data
     useEffect(() => {
-        fetch(`http://localhost:5000/products?selectedPage=${selectedPage}&product=6`)
+        fetch(`https://mighty-oasis-19752.herokuapp.com/products?selectedPage=${selectedPage}&product=6`)
             .then((response) => response.json())
             .then((data) => {
                 setItems(data);
@@ -31,7 +31,7 @@ const Store = () => {
     }, [selectedPage]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/productCount')
+        fetch('https://mighty-oasis-19752.herokuapp.com/productCount')
             .then((respones) => respones.json())
             .then((count) => {
                 const pageCount = Math.ceil(count.productCount / 6)

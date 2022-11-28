@@ -12,8 +12,8 @@ const Cart = (props) => {
     }
     return (
         <div className='cart'>
-            <p>Products: {quantity}</p>
-            <p>Total price: $ {totalPrice}</p>
+            <p style={{ fontWeight: 600 }}>Total product: {quantity}</p>
+            <p style={{ fontWeight: 600 }}>Total price: $ {totalPrice}</p>
             {
                 props.children
             }

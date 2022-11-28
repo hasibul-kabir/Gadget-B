@@ -15,7 +15,7 @@ const ProductDetails = () => {
     const { cart, handleAddtoCart } = useAddToCart();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://mighty-oasis-19752.herokuapp.com/product/${id}`)
             .then((response) => response.json())
             .then((data) => {
                 setProduct(data);

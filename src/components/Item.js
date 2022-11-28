@@ -18,10 +18,12 @@ const Item = (props) => {
                 <p className='description'>{description.length > 50 ? description.slice(0, 50) + '...' : description}</p>
                 <p className='price'>$ {price}</p>
             </div>
-            <div onClick={() => handleProductDetails(_id)} className='details-btn'>Details</div>
-            <div className='card-footer-btn' onClick={() => handleAddToCart(props.data)}>
-                <div className='txt'><p>Add to cart</p></div>
-                <ShoppingCartIcon style={{ color: 'white' }} />
+            <div className='buttons'>
+                <div onClick={() => handleProductDetails(_id)} className='details-btn'>Details</div>
+                <div className='add-cart' onClick={() => handleAddToCart(props.data)}>
+                    <div className='txt'><p>Add to cart</p></div>
+                    <ShoppingCartIcon style={{ color: 'white' }} />
+                </div>
             </div>
 
         </div>

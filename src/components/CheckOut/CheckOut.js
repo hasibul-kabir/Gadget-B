@@ -17,6 +17,7 @@ const CheckOut = () => {
 
     return (
         <div className='checkout'>
+            <h5>Comming soon...</h5>
             <div className='envoice'>
                 <div>
                     <p>Product: <span>{quantity}</span></p>
@@ -32,7 +33,7 @@ const CheckOut = () => {
                 <input type='email' value={user?.email} disabled />
                 <input type='text' placeholder='Contact no.' />
                 <textarea placeholder='Present address' />
-                <button>Place Order</button>
+                <button disabled>Place Order</button>
             </form>
         </div>
     )

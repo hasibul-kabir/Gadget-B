@@ -7,7 +7,7 @@ const useItems = () => {
     const [loading, setLoading] = useState(true);
     //fetch all data
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://mighty-oasis-19752.herokuapp.com/products')
             .then((response) => response.json())
             .then((data) => {
                 setItems(data);
