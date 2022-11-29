@@ -7,7 +7,7 @@ const useItems = () => {
     const [loading, setLoading] = useState(true);
     //fetch all data
     useEffect(() => {
-        fetch('https://mighty-oasis-19752.herokuapp.com/products')
+        fetch('https://gadget-b.onrender.com/products')
             .then((response) => response.json())
             .then((data) => {
                 setItems(data);
