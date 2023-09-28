@@ -4,7 +4,6 @@ import useAuthUser from "../../Hooks/Authentications/useAuthUser";
 import auth from "../../FirebaseConfig";
 import useRemoveOrder from "../../Hooks/useRemoveOrder";
 
-//checkout
 const CheckOut = () => {
   const { user } = useAuthUser(auth);
   const { cart } = useRemoveOrder();
